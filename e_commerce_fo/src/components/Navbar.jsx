@@ -18,8 +18,8 @@ import {
 import ShoppingCartDialog from "./ShoppingCartDialog";
 // import { FaTachometerAlt } from "react-icons/fa";
 const navigation = [
-  { name: "Dashboard", href: "#", current: true },
-  { name: "Team", href: "#", current: false },
+  { name: "Dashboard", href: "/", current: true },
+  { name: "Team", href: "/productView", current: false },
   { name: "Projects", href: "#", current: false },
   { name: "Calendar", href: "#", current: false },
 ];
