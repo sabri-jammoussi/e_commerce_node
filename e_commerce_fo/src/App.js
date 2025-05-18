@@ -4,12 +4,15 @@ import Navbar from "./components/Navbar";
 import Login from "./pages/Login";
 import ProductList from "./pages/ProductList"
 import ProductView from "./components/ProductView";
+import Footer from "./components/Footer"
+import Home from "./pages/Home"
 import {
   BrowserRouter as Router,
   Routes,
   Route,
   useLocation,
 } from "react-router-dom";
+
 
 // Wrapper to access `useLocation` outside Router
 function AppContent() {
@@ -19,6 +22,7 @@ function AppContent() {
   return (
     <>
       {!hideNavbarPaths.includes(location.pathname) && <Navbar />}
+      <Home/>
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<ProductList />} />
@@ -34,6 +38,8 @@ function App() {
   return (
     <Router>
       <AppContent />
+      <Footer/>
+
     </Router>
   );
 }
